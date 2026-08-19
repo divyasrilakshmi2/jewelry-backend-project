@@ -345,3 +345,134 @@ footer p {
     gap: 15px;
   }
 }
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.product-modal {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  background: #fffaf5;
+  border-radius: 12px;
+  overflow: auto;
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-image {
+  width: 45%;
+  min-height: 350px;
+  background: #f3e5d5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-image span {
+  font-size: 80px;
+  color: #a07842;
+}
+
+.modal-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #17120f;
+}
+
+.modal-content .product-category {
+  color: #a07842;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.modal-content h2 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 15px;
+  color: #17120f;
+}
+
+.modal-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #6f6258;
+  margin-bottom: 20px;
+}
+
+.modal-content strong {
+  font-size: 24px;
+  color: #17120f;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #17120f;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 10;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  background: #a07842;
+}
+
+@media (max-width: 700px) {
+  .product-modal {
+    width: 95%;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .modal-image {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .modal-image img {
+    min-height: 250px;
+  }
+
+  .modal-content h2 {
+    font-size: 26px;
+  }
+}
